@@ -7,14 +7,19 @@
 import random
 
 r = random.randint(1,100)
-
+count = 0
 while True:
-	num = input('猜一個號碼：')
+	num = input('請猜數字：')
 	num = int(num)
 	if num > r:
+		count += 1 #count = count + 1
 		print('小一點	～')
 	elif num < r:
+		count += 1
 		print('大一點～')
 	elif num == r:
-		print('猜對了！')
+		print('你猜中了！')
+		print('總共猜了', count,'次')
 		break
+	print('這是你猜的第', count,'次')
+
